@@ -1,0 +1,11 @@
+{
+  "kernel": "6.18.60-0-lts",
+  "source_sha256": "55dee556081545b8ed957d40d5a61ff8d0039ffd2760f3cff94d21b985f70133",
+  "squashfs_sha256": "5bbe5d0285ec26964dff5f0cd766c3c7cb3e2a1f719b835275b78df91e20809c",
+  "source_bytes": 2021775360,
+  "bytes": 288022528,
+  "source_tar_members": 8484,
+  "hardlinked_files": 1460,
+  "duplicate_bytes_saved": 1281725998,
+  "all_file_contents_and_metadata_verified": true
+}

@@ -1,0 +1,40 @@
+AikaOS Mini 11.1 - Abnahme der CD Edition
+
+ISO: aikaos-mini-11.1-cd-x86_64.iso
+Groesse: 684.285.952 Byte (684.3 MB)
+Grenze: 700.000.000 Byte - bestanden
+SHA-256: 2543c5b506a70abf17657a314b39be8cd1bce069c2ba76baf2e2f3beb3392baf
+
+Die fertige ISO wurde unter BIOS und UEFI von einem virtuellen, nur
+lesbaren CD-Laufwerk ohne Festplatte gestartet. QEMU 11.1.0, TCG,
+4 GB RAM, 4 virtuelle CPUs, Virtio-Grafik, virtuelle HDA-Soundkarte.
+
+Bestanden: automatischer Aika-Desktop, deutsches Tastaturlayout,
+Ethernet/DHCP, HTTPS-Zugriff, Desktop-Programmstarter, sudo in der
+Live-Sitzung und laufende Standarddienste. Das Live-Dateisystem liegt
+im RAM; ISO und Modloop sind nur lesbar eingebunden.
+Die Modloop-Signatur wurde mit dem auf der CD enthaltenen OpenSSL
+geprueft: Verified OK.
+
+YouTube: Big Buck Bunny lief in Firefox ESR mit Bild und Ton.
+Messpunkt: 15.741 Sekunden, 256 x 144,
+345 dekodierte Bilder, kein Decoderfehler. Ein aktiver,
+nicht stummgeschalteter Firefox-Audiostream wurde in PulseAudio gemessen.
+Der Host-Audioausgang der Test-VM war stumm; echte Lautsprecher wurden
+nicht abgenommen. Ein separater Pruefton aktivierte die virtuelle HDA-Ausgabe.
+Die Testaufloesung ist keine Mindest- oder Hoechstzusage fuer echte Hardware.
+
+Der Video- und Anwendungstest erfolgte vor dem letzten Paket-Zusatz
+OpenSSL auf ISO mit SHA-256:
+4a34f6f9c96a812fc7e91cee82c7c9cbfb887ede0730775961ecc3c4a2fbc4ba
+Danach wurden alle 403 vorhandenen APKs, Kernel, Initramfs und Modloop
+Byte fuer Byte mit der Endfassung verglichen. Sie sind identisch.
+Die Aika-Konfiguration ist bis auf die neue Paketzeile in /etc/apk/world
+identisch. Siehe media-equivalence.json und youtube-test.json.
+Die BIOS-/UEFI-Starttests und die Signaturpruefung gelten fuer die oben
+genannte Endfassung. Dateimanager PCManFM und Texteditor Mousepad wurden
+geoeffnet; Screenshot Desktop-Test.png. YouTube-Test.png zeigt die Wiedergabe.
+
+Nicht getestet: echte CD-R/Laufwerke, physische WLAN-, Grafik- und
+Audiogeraete. Diese lokale Live-CD hat keinen Installer, keine dauerhafte
+Speicherung und keine Secure-Boot-Unterstuetzung.

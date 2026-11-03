@@ -1,0 +1,9 @@
+Aika-Schwarz-Weiss-Logo
+Werkzeug: integriertes image_gen; keine CLI.
+Vorlage: aikaos-logo.png
+Ergebnis: aika-logo-schwarzweiss.png
+
+Prompt:
+Edit the supplied AikaOS mascot logo into a recognizable black-ink line-art version for a small monochrome printed CD sleeve. Preserve this exact anime cat-girl identity, face proportions, expressive eyes, smile with tiny fang, distinctive layered bob hair with longer side locks, both cat ears, the little pale hair clip on the viewer's left, and cat pendant choker. Head and shoulders portrait only, centered, both ears fully visible, no hand needed. Faithful recognizable portrait, NOT a generic cat face and NOT a newly invented character. Clean confident black outlines with white face and mostly white hair interiors; sparse fine black hatching to indicate dark hair, keep ink coverage low. No color, no colored rim light, no gray filled background, no solid black masses. Transparent background. No words, no frame, no CD, no sheet layout. High clarity at about 60 mm printed height.
+
+Layout: Der bestehende Kreis bleibt bei 60 mm Durchmesser. Das Motiv wird darin platziert. A4-Seite, Schnittkontur und Faltmasse bleiben erhalten.

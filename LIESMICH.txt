@@ -1,0 +1,69 @@
+AikaOS Mini 11.1 - CD Edition (x86_64)
+
+Die fertige CD ist out/aikaos-mini-11.1-cd-x86_64.iso.
+Sie bleibt unter 700.000.000 Byte und passt damit auf eine 700-MB-CD.
+Genaue Groesse und SHA-256 stehen in cd-build-manifest.json und der
+passenden .iso.sha256-Datei neben der ISO.
+
+ENTHALTEN
+
+Aika-Desktop mit Hintergrund, Startmenue und Fastfetch, IceWM, Firefox ESR
+mit HTML5-Video, PCManFM, Mousepad, Terminal, Netzwerk-/WLAN-Applet und
+Lautstaerkeregler. Deutsches Tastaturlayout, Zeitzone Europe/Berlin.
+Super+Enter: Terminal. Super+E: Dateien. Super+B: Browser.
+YouTube benoetigt Internet; die geeignete Aufloesung haengt von der Hardware ab.
+
+Die CD Edition heisst weiterhin AikaOS und behaelt die Grundfunktionen
+des Aika-Desktops. Fuer das CD-Limit verwendet sie Alpine Linux 3.24 und
+IceWM. Sie enthaelt nicht die gesamte Programmauswahl der grossen Edition.
+Die grosse AikaOS-Version bleibt davon unabhaengig.
+
+BRENNEN UND STARTEN
+
+1. Die ISO ALS DATENTRAEGERABBILD auf eine 700-MB-CD brennen.
+   Die ISO nicht einfach als Datei auf eine Daten-CD kopieren.
+   Dieselbe ISO fuer alle zwei oder drei Exemplare verwenden.
+2. Wenn das Brennprogramm eine Pruefung anbietet, die gebrannte CD pruefen.
+3. Im Bootmenue des Rechners das CD/DVD-Laufwerk waehlen.
+   x86_64-Prozessor erforderlich. BIOS und UEFI werden unterstuetzt;
+   fuer diese lokale CD Edition muss Secure Boot ausgeschaltet sein.
+
+Mit 4 GB RAM in QEMU geprueft; 4 GB werden fuer Firefox empfohlen.
+Das Live-System laedt seine Programme beim Start in den Arbeitsspeicher.
+Der Start von einer echten CD kann deshalb etwas dauern.
+Details zu den durchgefuehrten Tests stehen in ABNAHME.txt.
+Ein echtes optisches Laufwerk und echte WLAN-/Grafik-/Audiogeraete wurden
+in diesem Build nicht getestet.
+
+LIVE-BETRIEB
+
+Der Desktop startet automatisch als Benutzer aika, ohne Passwort.
+sudo ist in dieser Live-Sitzung ohne Passwort moeglich. Root ist gesperrt.
+Es ist kein Installer enthalten. Aenderungen und Downloads im Live-System
+gehen beim Neustart verloren. Dateien zum Behalten auf einem anderen
+Datentraeger speichern.
+
+Die Paketverwaltung dieser CD ist apk. Beispiel fuer die laufende Sitzung:
+  sudo apk update
+  sudo apk add PAKETNAME
+Auch solche nachinstallierten Programme bleiben nur bis zum Neustart.
+
+HERKUNFT UND BUILD
+
+Experimenteller lokaler Build, keine offizielle Alpine-ISO.
+Paketliste: cd-packages.txt. Build-Konfiguration: im Buildquellen-Archiv.
+Technische Hinweise und Grenzen des Wiederaufbaus: BUILD-HINWEISE.txt.
+Pakete und ihre Lizenzen stammen aus Alpine Linux:
+  https://pkgs.alpinelinux.org/packages?branch=v3.24&arch=x86_64
+Paket-Baurezepte und Verweise auf die Originalquellen:
+  https://gitlab.alpinelinux.org/alpine/aports/-/tree/3.24-stable
+
+Eigene Build-Skripte: GPL-3.0-or-later, siehe LICENSE.
+Die unveraenderten Aika-Grafiken und das Fastfetch-Portraet stammen aus dem
+vorhandenen AikaOS-public-Projekt. ARTWORK.md und THIRD_PARTY.md enthalten
+dessen Herkunftshinweise; die dortigen Originalpfade beziehen sich auf
+die grosse Edition. Mini-Zuordnung:
+  assets/desktop.png = aika-desktop.png
+  assets/aikaos-logo.png = aika-logo-v2.png
+  assets/background.png = assets/grub/background.png
+  assets/fastfetch.jsonc = assets/fastfetch/config-compact.jsonc

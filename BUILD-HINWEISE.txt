@@ -1,0 +1,59 @@
+AikaOS Mini 11.1 CD Edition - Build-Hinweise
+
+Das Buildquellen-Archiv dokumentiert den lokalen experimentellen Build.
+Es ist kein vollstaendiges Quellarchiv aller enthaltenen Linux-Pakete und
+kein installationsfertiger Ein-Befehl-Builder. Die Arbeitskopie enthaelt
+auch fruehere Arch-/NetSurf-Versuche; diese gehoeren nicht zur fertigen CD.
+
+Die CD verwendet signierte APK-Pakete aus den Alpine-v3.24-Repositories,
+Kernel 6.18.60-0-lts, Firefox ESR und IceWM. Die Paketversionen der konkreten
+CD stehen in cd-packages.txt. Erneute Builds mit neueren Paketstaenden
+koennen andere Groessen und Pruefsummen haben.
+
+Aufbau des lokalen Builders:
+  /home/aika/alpine-mini-build/chroot       Alpine-Buildumgebung
+  /home/aika/alpine-mini-build/chroot/aika  world, Overlay, Modloop, Caches
+  /home/aika/aikaos-mini                   Aika-Assets und Referenzdesktop
+
+alpine/upstream enthaelt die verwendeten Alpine-Mkimage-Skripte aus dem
+Zweig 3.24-stable. In mkimage.sh wurde --no-chown beim APK-Init entfernt,
+damit dieser Build unter root mit APK 3 funktioniert.
+alpine/mkimg.aika.sh legt die CD-Pakete und den Kernel fest.
+alpine/world ist die explizite Programmauswahl.
+
+alpine/make-overlay.py erzeugt die Aika-Konfiguration. Es verwendet beim
+ersten Erzeugen Dateien aus dem frueher vorbereiteten Referenzdesktop und
+dem offiziellen Alpine-Minirootfs. Diese lokalen Referenzverzeichnisse
+sind nicht im Archiv. Stattdessen liegt das vollstaendige fertige Overlay
+als prepared/aika-mini.apkovl.tar.gz bei. Es enthaelt Konfigurationen,
+Startskripte, das Benutzerprofil und die Grafiken mit Linux-Dateirechten.
+Ein genapkovl-aika.sh fuer Mkimage kopiert diese Datei nach $1.apkovl.tar.gz.
+
+alpine/run-build.sh ruft Mkimage in der vorbereiteten Chroot auf. Fuer einen
+neuen Builder sind zusaetzlich die ueblichen Alpine-Werkzeuge und ein neu
+erzeugter abuild-Signaturschluessel erforderlich. Private Signaturschluessel
+werden weder auf die CD noch in dieses Archiv kopiert.
+
+Fuer die CD-Groesse wurden identische unveraenderliche Firmware-Dateien
+vor der Squashfs-Kompression durch Hardlinks zusammengefasst. Es wurden
+keine Firmware-Dateinamen entfernt: alle 8.484 Eintraege sowie Inhalte,
+Dateirechte, Besitzer und Zeitstempel wurden mit dem Ausgangs-Tar verglichen.
+1.460 identische Dateien teilen sich dadurch den Inhalt. Das Modloop-Abbild
+ist 288.022.528 Byte gross. Der Pruefbericht liegt unter verification/.
+alpine/compact-modloop.py dokumentiert diesen Schritt, verwendet hier aber
+das lokal bereitgestellte MSYS2-mksquashfs unter tools/msys/usr/bin.
+Die Host-Werkzeuge und die grosse Modloop-Eingabedatei sind nicht beigepackt.
+Auf Linux laesst sich der Schritt mit dem nativen mksquashfs nachbilden.
+Eine neue Modloop-Datei muss zum Kernel passen und von update-kernel neu
+signiert werden; die Signaturpruefung beim Start bleibt eingeschaltet.
+
+alpine/repack-alpine.sh ersetzt den Standard-Bootschirm durch Aikas
+GRUB-Design und erzeugt die BIOS-/UEFI-CD. Das Skript erwartet leere neue
+Staging-Verzeichnisse und verweigert eine ISO ueber 700.000.000 Byte.
+Sein HTTP-Export ist ein lokaler QEMU-Transferhelfer, kein Upload ins Web.
+
+alpine/check-live.sh und test-browser.py sind nur fuer die Abnahme.
+Der Videotest startet Firefox mit einem separaten temporaeren Testprofil,
+Software-Rendering und Marionette. Die CD aktiviert keine Fernsteuerung
+im normalen Browserprofil. Python wurde dafuer nur in der laufenden
+Testsitzung nachinstalliert.

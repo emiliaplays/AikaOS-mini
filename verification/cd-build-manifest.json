@@ -1,0 +1,17 @@
+{
+  "name": "AikaOS Mini",
+  "version": "11.1",
+  "architecture": "x86_64",
+  "base_distribution": "Alpine Linux 3.24",
+  "desktop": "IceWM",
+  "browser": "Firefox ESR",
+  "filename": "aikaos-mini-11.1-cd-x86_64.iso",
+  "bytes": 684285952,
+  "limit_bytes": 700000000,
+  "fits_700mb_cd": true,
+  "sha256": "2543c5b506a70abf17657a314b39be8cd1bce069c2ba76baf2e2f3beb3392baf",
+  "built_at_utc": "2026-11-03T19:50:38.199766+00:00",
+  "status": "experimental-local-build",
+  "installer_included": false,
+  "secure_boot_supported": false
+}

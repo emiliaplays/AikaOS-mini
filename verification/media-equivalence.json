@@ -1,0 +1,17 @@
+{
+  "previous_iso_sha256": "4a34f6f9c96a812fc7e91cee82c7c9cbfb887ede0730775961ecc3c4a2fbc4ba",
+  "added_packages": [
+    "openssl-3.5.9-r0.apk"
+  ],
+  "existing_packages_byte_identical": 403,
+  "kernel_files_byte_identical": [
+    "boot/modloop-lts",
+    "boot/vmlinuz-lts",
+    "boot/initramfs-lts"
+  ],
+  "overlay_changed_files": [
+    "etc/apk/world"
+  ],
+  "browser_and_desktop_configuration_unchanged": true,
+  "verified": true
+}

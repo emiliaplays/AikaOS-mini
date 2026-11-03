@@ -1,0 +1,222 @@
+{
+  "url": "https://www.youtube.com/watch?v=aqz-KE-bpKQ",
+  "pass": true,
+  "samples": [
+    {
+      "title": "",
+      "url": "about:blank",
+      "ready": "uninitialized",
+      "video": null,
+      "playError": null,
+      "formats": {
+        "vp9": "probably",
+        "h264": "probably"
+      },
+      "message": ""
+    },
+    {
+      "title": "Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film - YouTube",
+      "url": "https://www.youtube.com/watch?v=aqz-KE-bpKQ",
+      "ready": "loading",
+      "video": {
+        "time": 0,
+        "duration": null,
+        "paused": false,
+        "readyState": 0,
+        "width": 0,
+        "height": 0,
+        "decoded": 0,
+        "presented": 0,
+        "hasAudio": false,
+        "muted": false,
+        "volume": 0.25,
+        "error": null,
+        "ad": false
+      },
+      "playError": null,
+      "formats": {
+        "vp9": "probably",
+        "h264": "probably"
+      },
+      "message": ""
+    },
+    {
+      "title": "Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film - YouTube",
+      "url": "https://www.youtube.com/watch?v=aqz-KE-bpKQ&themeRefresh=1",
+      "ready": "loading",
+      "video": {
+        "time": 0,
+        "duration": null,
+        "paused": false,
+        "readyState": 0,
+        "width": 0,
+        "height": 0,
+        "decoded": 0,
+        "presented": 0,
+        "hasAudio": false,
+        "muted": false,
+        "volume": 0.25,
+        "error": null,
+        "ad": false
+      },
+      "playError": null,
+      "formats": {
+        "vp9": "probably",
+        "h264": "probably"
+      },
+      "message": ""
+    },
+    {
+      "title": "Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film - YouTube",
+      "url": "https://www.youtube.com/watch?v=aqz-KE-bpKQ&themeRefresh=1",
+      "ready": "interactive",
+      "video": {
+        "time": 0,
+        "duration": 634.601,
+        "paused": false,
+        "readyState": 4,
+        "width": 854,
+        "height": 480,
+        "decoded": 11,
+        "presented": 0,
+        "hasAudio": true,
+        "muted": false,
+        "volume": 0.25,
+        "error": null,
+        "ad": false
+      },
+      "playError": null,
+      "formats": {
+        "vp9": "probably",
+        "h264": "probably"
+      },
+      "message": ""
+    },
+    {
+      "title": "Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film - YouTube",
+      "url": "https://www.youtube.com/watch?v=aqz-KE-bpKQ&themeRefresh=1",
+      "ready": "complete",
+      "video": {
+        "time": 7.581,
+        "duration": 634.601,
+        "paused": false,
+        "readyState": 4,
+        "width": 854,
+        "height": 480,
+        "decoded": 191,
+        "presented": 62,
+        "hasAudio": true,
+        "muted": false,
+        "volume": 0.25,
+        "error": null,
+        "ad": false
+      },
+      "playError": null,
+      "formats": {
+        "vp9": "probably",
+        "h264": "probably"
+      },
+      "message": ""
+    },
+    {
+      "title": "Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film - YouTube",
+      "url": "https://www.youtube.com/watch?v=aqz-KE-bpKQ&themeRefresh=1",
+      "ready": "complete",
+      "video": {
+        "time": 15.741,
+        "duration": 634.601,
+        "paused": false,
+        "readyState": 4,
+        "width": 256,
+        "height": 144,
+        "decoded": 345,
+        "presented": 101,
+        "hasAudio": true,
+        "muted": false,
+        "volume": 0.25,
+        "error": null,
+        "ad": false
+      },
+      "playError": null,
+      "formats": {
+        "vp9": "probably",
+        "h264": "probably"
+      },
+      "message": ""
+    }
+  ],
+  "successful_sample": {
+    "title": "Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film - YouTube",
+    "url": "https://www.youtube.com/watch?v=aqz-KE-bpKQ&themeRefresh=1",
+    "ready": "complete",
+    "video": {
+      "time": 15.741,
+      "duration": 634.601,
+      "paused": false,
+      "readyState": 4,
+      "width": 256,
+      "height": 144,
+      "decoded": 345,
+      "presented": 101,
+      "hasAudio": true,
+      "muted": false,
+      "volume": 0.25,
+      "error": null,
+      "ad": false
+    },
+    "playError": null,
+    "formats": {
+      "vp9": "probably",
+      "h264": "probably"
+    },
+    "message": ""
+  },
+  "audio_sink_inputs": [
+    {
+      "index": 0,
+      "driver": "protocol-native.c",
+      "owner_module": "8",
+      "client": "2",
+      "sink": 0,
+      "sample_specification": "float32le 2ch 48000Hz",
+      "channel_map": "front-left,front-right",
+      "format": "pcm, format.sample_format = \"\\\"float32le\\\"\"  format.rate = \"48000\"  format.channels = \"2\"  format.channel_map = \"\\\"front-left,front-right\\\"\"",
+      "corked": false,
+      "mute": false,
+      "volume": {
+        "front-left": {
+          "value": 41285,
+          "value_percent": "63%",
+          "db": "-12.04 dB"
+        },
+        "front-right": {
+          "value": 41285,
+          "value_percent": "63%",
+          "db": "-12.04 dB"
+        }
+      },
+      "balance": 0.0,
+      "buffer_latency_usec": 111145.0,
+      "sink_latency_usec": 79843.0,
+      "resample_method": "copy",
+      "properties": {
+        "media.name": "Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film - YouTube",
+        "application.name": "Firefox",
+        "native-protocol.peer": "UNIX socket client",
+        "native-protocol.version": "35",
+        "application.process.id": "2702",
+        "application.process.user": "aika",
+        "application.process.host": "aika-mini",
+        "application.process.binary": "firefox-esr",
+        "application.language": "de_DE.UTF-8",
+        "window.x11.display": ":0",
+        "application.process.machine_id": "350f10563e3646cd9efd25fb6aea3921",
+        "application.icon_name": "firefox-esr",
+        "module-stream-restore.id": "sink-input-by-application-name:Firefox"
+      }
+    }
+  ],
+  "tested_iso_sha256": "4a34f6f9c96a812fc7e91cee82c7c9cbfb887ede0730775961ecc3c4a2fbc4ba",
+  "test_environment": "QEMU 11.1.0, TCG, UEFI, 4096 MiB, 4 vCPU; separate QA Firefox profile",
+  "scope": "Media test before adding only the openssl APK; see media-equivalence.json for byte comparison with final CD."
+}

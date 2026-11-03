@@ -1,0 +1,50 @@
+{
+  "tested_at_utc": "2026-11-03T19:56:50.440484+00:00",
+  "name": "AikaOS Mini 11.1 CD Edition",
+  "iso": "aikaos-mini-11.1-cd-x86_64.iso",
+  "bytes": 684285952,
+  "sha256": "2543c5b506a70abf17657a314b39be8cd1bce069c2ba76baf2e2f3beb3392baf",
+  "fits_700mb_cd": true,
+  "environment": {
+    "emulator": "QEMU 11.1.0",
+    "acceleration": "TCG",
+    "ram_mib": 4096,
+    "vcpus": 4,
+    "graphics": "virtio-vga",
+    "audio": "HDA duplex, silent host backend",
+    "hard_disks": 0
+  },
+  "final_iso_checks": {
+    "bios_desktop": true,
+    "uefi_desktop": true,
+    "autologin_aika": true,
+    "german_keyboard_layout": true,
+    "ethernet_dhcp_https": true,
+    "desktop_commands_present": true,
+    "modloop_signature_verified": true,
+    "default_services_running": true,
+    "live_root_in_ram": true
+  },
+  "media_test": {
+    "tested_iso_sha256": "4a34f6f9c96a812fc7e91cee82c7c9cbfb887ede0730775961ecc3c4a2fbc4ba",
+    "youtube_video": true,
+    "firefox_audio_stream": true,
+    "width": 256,
+    "height": 144,
+    "playback_seconds": 15.741,
+    "decoded_frames": 345,
+    "relation_to_final_iso": "Existing 403 APKs and kernel/initramfs/modloop are byte-identical; only openssl APK and /etc/apk/world were added/changed."
+  },
+  "desktop_test": {
+    "pcmanfm_opened": true,
+    "mousepad_opened": true,
+    "evidence": "Desktop-Test.png; same byte-verified desktop packages and configuration"
+  },
+  "limitations": [
+    "No physical CD burn/drive test",
+    "No physical Wi-Fi/GPU/audio device test",
+    "No installer or persistence",
+    "Secure Boot unsupported",
+    "No promise of a particular YouTube resolution"
+  ]
+}

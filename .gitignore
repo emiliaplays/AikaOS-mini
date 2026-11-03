@@ -1,0 +1,14 @@
+out/
+vm/
+tools/
+transfer/
+tests/
+work/
+__pycache__/
+*.pyc
+*.iso
+*.qcow2
+*.log
+.env
+*.key
+*.pem
